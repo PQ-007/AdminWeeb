@@ -1,0 +1,117 @@
+/* Remove hover effect for all Ant Design buttons */
+.ant-btn:hover {
+  background-color: unset !important;
+  color: unset !important;
+  border-color: unset !important;
+}
+
+/* Ensure pagination buttons' text is visible */
+.ant-pagination-item a {
+  color: inherit !important; /* Make sure the text color is inherited */
+  opacity: 1 !important; /* Prevent opacity changes */
+}
+
+/* Make sure hover/focus styles do not hide pagination button values */
+.ant-pagination-item:hover a,
+.ant-pagination-item:focus a {
+  background-color: unset !important; /* Prevent background color change */
+  color: inherit !important; /* Maintain text color */
+}
+
+/* Custom table cell height */
+/* Custom height for a specific table cell */
+/* Set the height of all table cells to 36px */
+.ant-table-tbody > tr > td {
+  height: 36px !important;
+  padding: 0 8px !important; /* Adjust padding if needed */
+ 
+}
+/* Override text color and background for better visibility */
+/* Ensure the inner text color for all picker cells */
+.ant-picker-cell-inner {
+  color: #333 !important; /* Default text color */
+  background-color: transparent !important; /* Transparent background by default */
+}
+
+/* Hover and focus behavior for individual cells */
+.ant-picker-cell-inner:hover,
+.ant-picker-cell-inner:focus,
+.ant-picker-cell-selected-inner {
+  color: #fff !important; /* White text on hover/focus */
+  background-color: #1890ff !important; /* Blue background for hover/focus */
+}
+
+/* Style the start date in the range */
+.ant-picker-cell-range-start .ant-picker-cell-inner {
+  background-color: #1890ff !important; /* Blue background for start */
+  color: white !important; /* White text for start date */
+  
+}
+
+/* Style the end date in the range */
+.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background-color: #1890ff !important; /* Blue background for end */
+  color: white !important; /* White text for end date */
+ 
+}
+
+/* Style the in-range dates */
+.ant-picker-cell-in-range .ant-picker-cell-inner {
+  background-color: #e6f7ff !important; /* Light blue background for dates in the range */
+  color: #1890ff !important; /* Blue text for in-range dates */
+}
+.sort-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 110px;
+}
+/* Optional: Adjust table row height */
+.ant-table-tbody > tr {
+  height: 36px !important;
+  max-width: 120px;
+}
+.border-dis {
+  border: 1px solid #EAECF0; /* Gray border */
+  border-radius: 4px;
+}
+
+.border-dis:focus{
+  border: 1px solid #EAECF0; 
+  outline: none;
+}
+.border-dis:hover{
+  border-color: #9ca3af; /* Slightly darker gray on hover/focus */
+  outline: none; /* Remove default focus outline */
+}
+.ant-radio-button-wrapper-checked {
+  background-color: #E6F7FF !important;
+  color: #1890FF !important;
+  border-color: inherit !important;
+}
+.ant-radio-button-wrapper:hover {
+  background-color: #E6F7FF !important;
+  color: #1890FF !important;
+  border-color: inherit !important;
+  
+}
+.ant-radio-group {
+  display: flex;
+  flex-direction: row; /* Ensures the buttons are displayed in a row */
+  align-items: center; /* Vertically centers the buttons */
+  border-color: inherit !important;
+}
+
+.ant-radio-button-wrapper {
+  height: 40px;
+  display: flex;
+  flex-direction: row; /* Ensures content is aligned in a row */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  text-align: center;
+  border-color: inherit !important;
+  
+}
+
