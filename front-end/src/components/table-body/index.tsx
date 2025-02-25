@@ -61,7 +61,13 @@ const TableBody: React.FC<TableBodyProps> = ({ data, handleDataChange }) => {
     <ProTable
       dataSource={data}
       columns={getColumns(sortOrders, handleSort, onView, onFix, onDelete)}
-      pagination={{ pageSize: 10 }}
+
+      pagination={{ 
+        pageSize: 10,
+        showSizeChanger: true,  // Allow users to change the page size
+        pageSizeOptions: ['5', '10', '20'],
+        showQuickJumper: true,  // Allows users to jump to a specific page
+      }}
       options={false}
       search={false}
       rowKey="key"

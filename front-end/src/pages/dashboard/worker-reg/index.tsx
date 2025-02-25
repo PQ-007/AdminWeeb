@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { message} from "antd";
 import TableHeader from "components/table-header";
 import TableBody from "components/table-body";
-import {data0} from "./worker-data";
+import data0 from "./worker-data.json";
 interface Worker {
   key: string;
   lastName: string;
