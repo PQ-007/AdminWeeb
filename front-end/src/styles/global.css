@@ -115,3 +115,6 @@
   
 }
 
+.ant-table-thead .ant-table-cell {
+  white-space: nowrap !important; /* Prevents wrapping */
+}

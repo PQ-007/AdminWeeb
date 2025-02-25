@@ -7,7 +7,7 @@ import { AuthContext } from "context/AuthContext";
 import { AuthActionTypes } from "context/AuthContext/type";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { ArrowDown, ChevronDown, UserDown01} from "untitledui-js-base";
-import menuData from "./menu";
+import {menuData, AdminMenu }from "./menu";
 
 const DashboardLayout: React.FC = () => {
   const [user, dispatch] = useContext(AuthContext);

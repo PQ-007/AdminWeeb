@@ -34,22 +34,13 @@ const TableHeader: React.FC<TableHeaderProps> = ({ handleDataChange, handleSaveU
     setCreateModalOpen(true);
   };
   
-  const handleDateChange = (dates: [Dayjs, Dayjs] | null) => {
-    setDates(dates);
-    if (dates) {
-      console.log(
-        `Selected date range: ${dates[0].format(
-          "YYYY/MM/DD"
-        )} - ${dates[1].format("YYYY/MM/DD")}`
-      );
-    }
-  }
-
-
-
   const handleCancelUser = () => {
     setCreateModalOpen(false); // Close modal on cancel
   };
+  const handleSave1User = (value : any) => {
+    handleSaveUser(value)
+    setCreateModalOpen(false);
+  }
 
   return (
     <div className="bg-inherit py-[20px] px-[24px] gap-[10px] rounded-[10px] h-[80px] flex justify-between items-center">
@@ -114,7 +105,7 @@ const TableHeader: React.FC<TableHeaderProps> = ({ handleDataChange, handleSaveU
 
       {/* Modal for Adding User */}
       <AddUser
-        onSave={handleSaveUser}
+        onSave={handleSave1User}
         open={createModalOpen}
         on1Cancel={handleCancelUser}
       />

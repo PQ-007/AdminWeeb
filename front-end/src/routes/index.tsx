@@ -59,10 +59,11 @@ const MainRoutes: React.FC = () => {
         path="*"
         element={
           user?.authorized ? (
-            <Navigate to="dashboard/worker-reg" />
+            // <Navigate to="auth/login" />
+            <Navigate to="dashboard" />
           ) : (
             // <Navigate to="auth/login" />
-            <Navigate to="dashboard/worker-reg" />
+            <Navigate to="dashboard" />
           )
         }
       />
