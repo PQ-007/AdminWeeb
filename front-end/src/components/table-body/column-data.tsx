@@ -1,6 +1,8 @@
 import { Button } from "antd";
 import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
-import { DeleteOutlined, EditOutlined, EyeOutlined } from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined, EyeOutlined, MinusCircleOutlined } from "@ant-design/icons";
+import IBadge from "components/badge";
+import { Edit04 } from "untitledui-js-base";
 
 export type ColumnKeys =
   | "lastName"
@@ -109,6 +111,20 @@ export const getColumns = (
       </>
     ),
     dataIndex: "role",
+    render: (_: any, record: any) => (
+      <div className="flex justify-center items-center h-[36px]">
+        <IBadge
+          title={record.role}
+          color={
+            record.role === "Тээврийн менежер"
+              ? "blue"
+              : record.role === "Кассир"
+              ? "orange"
+              : "pink"
+          }
+        />
+      </div>
+    ),
   },
   {
     title: (
@@ -234,6 +250,7 @@ export const getColumns = (
       </>
     ),
     dataIndex: "email",
+    className: 'email-column',
   },
   {
     title: (
@@ -294,17 +311,21 @@ export const getColumns = (
           icon={<EyeOutlined />}
           type="default"
           onClick={() => onView(record.key)}
+          style={{ border: 'none' }}
+          
+          
         />
         <Button
-          icon={<EditOutlined />}
+          icon={<Edit04 size="15" />}
           type="default"
-          style={{ marginLeft: 8 }}
+          style={{ marginLeft: 8, border: 'none'}}
           onClick={() => onFix(record.key)}
+          
         />
         <Button
-          icon={<DeleteOutlined />}
+          icon={<MinusCircleOutlined/>}
           danger
-          style={{ marginLeft: 8 }}
+          style={{ marginLeft: 8, border: 'none' }}
           onClick={() => onDelete(record.key)}
         />
       </div>

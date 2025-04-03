@@ -20,6 +20,9 @@ const IBadge: FC<Props> = ({ title, color }) => {
     case "gray":
       colorClass = "bg-gray-200 text-gray-700";
       break;
+    case "orange":
+      colorClass = "bg-[#FFF4ED] text-orange-700";
+      break;
     case "green":
       colorClass = "bg-green-100 text-green-700";
       break;
@@ -47,7 +50,7 @@ const IBadge: FC<Props> = ({ title, color }) => {
   }
   return (
     <span
-      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium truncate ${colorClass}`}
+      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-s font-medium truncate ${colorClass}`}
     >
       {title}
     </span>

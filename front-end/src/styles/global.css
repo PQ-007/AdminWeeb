@@ -5,6 +5,7 @@
   border-color: unset !important;
 }
 
+
 /* Ensure pagination buttons' text is visible */
 .ant-pagination-item a {
   color: inherit !important; /* Make sure the text color is inherited */
@@ -20,12 +21,7 @@
 
 /* Custom table cell height */
 /* Custom height for a specific table cell */
-/* Set the height of all table cells to 36px */
-.ant-table-tbody > tr > td {
-  height: 36px !important;
-  padding: 0 8px !important; /* Adjust padding if needed */
- 
-}
+
 /* Override text color and background for better visibility */
 /* Ensure the inner text color for all picker cells */
 .ant-picker-cell-inner {
@@ -45,14 +41,12 @@
 .ant-picker-cell-range-start .ant-picker-cell-inner {
   background-color: #1890ff !important; /* Blue background for start */
   color: white !important; /* White text for start date */
-  
 }
 
 /* Style the end date in the range */
 .ant-picker-cell-range-end .ant-picker-cell-inner {
   background-color: #1890ff !important; /* Blue background for end */
   color: white !important; /* White text for end date */
- 
 }
 
 /* Style the in-range dates */
@@ -60,42 +54,45 @@
   background-color: #e6f7ff !important; /* Light blue background for dates in the range */
   color: #1890ff !important; /* Blue text for in-range dates */
 }
-.sort-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  width: 110px;
-}
-/* Optional: Adjust table row height */
+/* .ant-btn-icon {
+  color: #667085;
+} */
+
+/* Apply height and max-width to table rows */
 .ant-table-tbody > tr {
-  height: 36px !important;
-  max-width: 120px;
+  height: 36px !important;  /* Set height of rows */
+}
+
+/* Apply max-width to each table cell */
+.ant-table-tbody > tr > td {
+  padding: 0 8px !important;  /* Adjust padding of cells */
+  max-width: 170px !important;  /* Set maximum width of cells */
+  overflow: hidden;  /* Prevent content from overflowing */
+  text-overflow: ellipsis;  /* Add ellipsis for overflowing text */
+  white-space: nowrap;  /* Prevent text from wrapping */
 }
 .border-dis {
-  border: 1px solid #EAECF0; /* Gray border */
+  border: 1px solid #eaecf0; /* Gray border */
   border-radius: 4px;
 }
 
-.border-dis:focus{
-  border: 1px solid #EAECF0; 
+.border-dis:focus {
+  border: 1px solid #eaecf0;
   outline: none;
 }
-.border-dis:hover{
+.border-dis:hover {
   border-color: #9ca3af; /* Slightly darker gray on hover/focus */
   outline: none; /* Remove default focus outline */
 }
 .ant-radio-button-wrapper-checked {
-  background-color: #E6F7FF !important;
-  color: #1890FF !important;
+  background-color: #e6f7ff !important;
+  color: #1890ff !important;
   border-color: inherit !important;
 }
 .ant-radio-button-wrapper:hover {
-  background-color: #E6F7FF !important;
-  color: #1890FF !important;
+  background-color: #e6f7ff !important;
+  color: #1890ff !important;
   border-color: inherit !important;
-  
 }
 .ant-radio-group {
   display: flex;
@@ -112,9 +109,16 @@
   align-items: center; /* Centers the content vertically */
   text-align: center;
   border-color: inherit !important;
-  
 }
 
 .ant-table-thead .ant-table-cell {
   white-space: nowrap !important; /* Prevents wrapping */
+}
+
+.ant-table-thead > tr > th {
+  color: #475467  !important;/* Change this to the desired color */
+}
+
+.ant-table-tbody > tr > td {
+  color: #475467;  /* Change this to the color you want */
 }
