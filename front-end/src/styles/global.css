@@ -66,7 +66,7 @@
 /* Apply max-width to each table cell */
 .ant-table-tbody > tr > td {
   padding: 0 8px !important;  /* Adjust padding of cells */
-  max-width: 160px !important;  /* Set maximum width of cells */
+  max-width: 170px !important;  /* Set maximum width of cells */
   overflow: hidden;  /* Prevent content from overflowing */
   text-overflow: ellipsis;  /* Add ellipsis for overflowing text */
   white-space: nowrap;  /* Prevent text from wrapping */
